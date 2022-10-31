@@ -169,7 +169,7 @@ a {
     line-height: 1.6;
     letter-spacing: 1px;
     height: 100%;
-    background-image: url('_background_desktop.jpeg');
+    background-image: url('https://raw.githubusercontent.com/andrealmeida-24/TrackR-App/main/_background_desktop.jpeg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
