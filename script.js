@@ -333,26 +333,6 @@ class App {
         `${this.checkWorkoutEmoji(workout.type)} ${workout.description}`
       )
       .openPopup();
-
-    const userCoords = new L.LatLng(this.#latitude, this.#longitude);
-    const pointList = [workout.coords, userCoords];
-
-    let color;
-    if (workout.type === 'running') {
-      color = '#00c46a';
-    } else if (workout.type === 'cycling') {
-      color = '#ffb545';
-    } else {
-      color = '#0e86d4';
-    }
-
-    const polyline = new L.Polyline(pointList, {
-      color: color,
-      weight: 5,
-      opacity: 1,
-      smoothFactor: 1,
-    });
-    polyline.addTo(this.#map);
   }
 
   checkWorkoutEmoji(workoutType) {
