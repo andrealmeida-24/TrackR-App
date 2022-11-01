@@ -79,6 +79,8 @@ const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
 
+const instructionsTxt = document.querySelector('.app-instructions--txt');
+
 const clearAllWorkouts = document.querySelector('.clear-all--txt');
 const modalParent = document.querySelector('.modal-parent');
 const closeModalBtn = document.querySelector('.X');
@@ -145,6 +147,9 @@ class App {
       this._moveToCurrentLocation.bind(this)
     );
 
+    //Instructions text change
+    this._intructionsTxtVisibility();
+
     // window mobile ? not working
     //this._checkWindowSource();
   }
@@ -155,7 +160,7 @@ class App {
       navigator.geolocation.getCurrentPosition(
         this._loadMap.bind(this),
         function () {
-          alert("Couldn't get your current position!");
+          alert('Please enable Location on the browser!');
         }
       );
   }
